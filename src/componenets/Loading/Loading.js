@@ -7,9 +7,9 @@ function Loading() {
     console.log(`<Loading/> rendered`)
   return (
     <div className='Loading'>
-        <div>
+      <div>
         <CircularProgress/>
-        </div>
+      </div>
         <h4>
         Loading...
         </h4>

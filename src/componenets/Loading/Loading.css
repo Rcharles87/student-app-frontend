@@ -1,12 +1,5 @@
 .Loading{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    height: 80vh;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 35px;
+    display: grid;
+    justify-items: center;
+    font-size: 30px;
 }
