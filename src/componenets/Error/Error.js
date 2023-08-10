@@ -1,6 +1,5 @@
 import React from 'react'
 import './Error.css'
-
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 
