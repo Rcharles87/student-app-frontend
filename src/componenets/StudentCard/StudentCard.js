@@ -1,10 +1,7 @@
-import { useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
 import "./StudentCard.css";
-import {FaMinus, FaPlus} from 'react-icons/fa'
 
-const StudentCard = ({ student }) => {
-  const [ expanded, setExpanded ] = useState(false);
-
+const StudentCard = ({ student, expanded, onClick }) => {
   const { email, company, firstName, lastName, pic, grades, id, skill } =
     student;
 
@@ -35,20 +32,24 @@ const StudentCard = ({ student }) => {
           <li>Skill: {skill}</li>
           <li>Avrage: {average}</li>
         </ul>
-        {expanded && <div className="StudentCard__grades">
-          <ul>
-            {grades.map((grade,index)=>(
-              <li key={`${grade}${index}`}>
-               <span>Test {index+1}</span>  <span>{grade}%</span>
-              </li>
-            ))}
-          </ul>
-          </div>}
+        {expanded && (
+          <div className="StudentCard__grades">
+            <ul>
+              {grades.map((grade, index) => (
+                <li key={`${grade}${index}`}>
+                  <span>Test {index + 1}</span> <span>{grade}%</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className="StudentCard__controls">
-              <button onClick={()=>{setExpanded(!expanded)}}>
-                {expanded ? <FaMinus/> : <FaPlus/>}
-              </button>
+        <button
+          onClick={onClick}
+        >
+          {expanded ? <FaMinus /> : <FaPlus />}
+        </button>
       </div>
     </div>
   );

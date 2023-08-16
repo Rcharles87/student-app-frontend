@@ -52,7 +52,7 @@ function App() {
   );
   return (
     <div className="App">
-      <Container center={Boolean(error || loading)}>
+      <Container center={Boolean(error || loading)} scroll={false}>
         {renderContent()}
       </Container>
     </div>
