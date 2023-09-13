@@ -5,7 +5,7 @@ import Loading from "./componenets/Loading/Loading.js";
 import Error from "./componenets/Error/Error.js";
 import Container from "./componenets/Container/Container.js";
 
-const API_URL = "http://localhost:8888";
+const API_URL = process.env.REACT_APP_API_URL;
 
 function App() {
   const [studentData, setStudentData] = useState([]);

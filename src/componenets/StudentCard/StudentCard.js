@@ -30,7 +30,7 @@ const StudentCard = ({ student, expanded, onClick }) => {
           <li>Email: {email}</li>
           <li>Company: {company}</li>
           <li>Skill: {skill}</li>
-          <li>Avrage: {average}</li>
+          <li>Average: {average}%</li>
         </ul>
         {expanded && (
           <div className="StudentCard__grades">
