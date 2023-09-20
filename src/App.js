@@ -18,7 +18,7 @@ function App() {
       try {
         setError("");
         setLoading(true);
-        const res = await fetch(`${API_URL}/students`);
+        const res = await fetch(`${API_URL}/v2/students?include=grades`);
         const json = await res.json();
         console.log("<App/> useEffet() fetched data", json);
         const { data, error } = json;

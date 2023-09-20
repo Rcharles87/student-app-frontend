@@ -34,8 +34,8 @@ const StudentList = ({ studentData }) => {
 
   if (searchInput) {
     dataToDisplay = studentData.filter((student) => {
-      const { firstName, lastName } = student;
-      const fullName = `${firstName} ${lastName}`.toLowerCase();
+      const { first_name, last_name } = student;
+      const fullName = `${first_name} ${last_name}`.toLowerCase();
 
       return fullName.includes(searchInput.toLowerCase());
     });
