@@ -37,7 +37,7 @@ const StudentCard = ({ student, expanded, onClick }) => {
           <div className="StudentCard__grades">
             <ul>
               {grades.map((grade, index) => (
-                <li key={`${grade}${index}`}>
+                <li key={grade.id}>
                   <span>Test {index + 1}</span> <span>{grade.score}%</span>
                 </li>
               ))}
